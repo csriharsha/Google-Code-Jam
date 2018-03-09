@@ -1,16 +1,16 @@
-#include <stdio.h>
-#include <string.h>
- 
+#include <iostream>
+using namespace std;
+
 int main() {
-    int T, R, C;
-    scanf("%d", &T);
+	int T, R, C;
+    cin >> T;
     for(int i = 0; i < T; i++)
     {
-        scanf("%d %d", &R, &C);
+        cin >> R >> C;
         char alpha[R][C+1], temp;
         for(int j = 0; j < R; j++)
         {
-            scanf("%s", &alpha[j]);
+            cin >> alpha[j];
             for(int k = 0; k < C; k++)
             {
                 if(alpha[j][k] != '?')
@@ -25,12 +25,11 @@ int main() {
                 alpha[j][k] = temp;
             }
         }
-        printf("Case #%d:\n", i+1);
+        cout << i+1 << "\n";
         for(int j = 0; j < R; j++)
         {
-            printf("%s\n", alpha[j]);
+            cout << alpha[j] << "\n";
         }
     }
-
-   return 0;
+	return 0;
 }
